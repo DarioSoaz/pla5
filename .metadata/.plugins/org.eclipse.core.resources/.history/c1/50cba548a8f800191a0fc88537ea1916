@@ -1,0 +1,33 @@
+package ejercicioSpring;
+
+public class Bloques implements IProcesar {
+	
+	@Override
+	
+public ArrayList<String> dividir (String cadena) {
+
+		ArrayList<String> cadenas = new ArrayList<String>();
+	
+	
+		for (int p = 0; p < cadena.length(); p += 4)
+
+			cadenas.add(cadena.substring(p, (p + 4 < cadena.length()) ? p + 4 : cadena.length()));
+	
+	
+		return cadenas;
+	}
+	
+	
+@Override
+	
+public String unir(ArrayList<String> cadenas) {
+	
+	String cadena = "";		
+		
+for (String cad : cadenas) cadena += cad;		
+	
+	return cadena;
+	}
+}
+
+

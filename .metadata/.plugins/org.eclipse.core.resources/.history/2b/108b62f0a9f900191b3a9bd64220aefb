@@ -1,0 +1,19 @@
+package ejercicioSpring;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
+
+@Component
+@Configuration
+@ComponentScan("cadenas")
+public class ConfCesar {
+    
+    @Bean
+	public Codificador codificador () {	
+		return new Codificador(new Palabras(), new Cesar());
+	}
+
+	
+}
