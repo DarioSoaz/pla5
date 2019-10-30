@@ -31,11 +31,12 @@ public class Codificador {
 	
 	public String codificar(String cadena) {
 		ArrayList<String> res = new ArrayList<String>();
-		res = procesar.dividir(cadena);
+		ArrayList<String> in = new ArrayList<String>();
+		in = procesar.dividir(cadena);
 		String cadFinal = "";
 		
-		for (int i = 0; i < res.size(); i++) {
-			res.add(codificacion.codificar(res.get(i)));
+		for (int i = 0; i < in.size(); i++) {
+			res.add(codificacion.codificar(in.get(i)));
 		}
 		cadFinal = procesar.unir(res);	
 		return cadFinal;
@@ -43,11 +44,12 @@ public class Codificador {
 	
 	public String decodificar(String cadena) {
 		ArrayList<String> res = new ArrayList<String>();
-		res = procesar.dividir(cadena);
+		ArrayList<String> in = new ArrayList<String>();
+		in = procesar.dividir(cadena);
 		String cadFinal = "";
 		
-		for (int i = 0; i < res.size(); i++) {
-			res.add(codificacion.decodificar(res.get(i)));
+		for (int i = 0; i < in.size(); i++) {
+			res.add(codificacion.decodificar(in.get(i)));
 		}
 		cadFinal = procesar.unir(res);	
 		return cadFinal;
